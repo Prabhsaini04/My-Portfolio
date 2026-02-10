@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
@@ -27,13 +30,13 @@
             --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             --hover-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--dark-text);
@@ -41,53 +44,58 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: 600;
             color: var(--secondary-color);
         }
-        
+
         .code-font {
             font-family: 'JetBrains Mono', monospace;
         }
-        
+
         .mono-font {
             font-family: 'Roboto Mono', monospace;
         }
-        
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: var(--primary-color);
             border-radius: 5px;
         }
-        
+
         /* Header & Navigation */
         .navbar {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.95);
             transition: all 0.3s ease;
         }
-        
+
         .navbar-scrolled {
             box-shadow: var(--card-shadow);
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
         }
-        
+
         .navbar-brand {
             font-weight: 700;
             color: var(--primary-color) !important;
             font-size: 1.5rem;
         }
-        
+
         .nav-link {
             font-weight: 500;
             margin: 0 10px;
@@ -95,7 +103,7 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -106,17 +114,17 @@
             background-color: var(--primary-color);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
-        
+
         .nav-link:hover,
         .nav-link.active {
             color: var(--primary-color) !important;
         }
-        
+
         /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #dbeafe 100%);
@@ -127,7 +135,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -138,7 +146,7 @@
             background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 70%);
             border-radius: 50%;
         }
-        
+
         .hero-section::after {
             content: '';
             position: absolute;
@@ -150,38 +158,38 @@
             border-radius: 50%;
             z-index: 0;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
         }
-        
+
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
             }
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--light-text);
             margin-bottom: 30px;
             max-width: 600px;
         }
-        
+
         .highlight {
             color: var(--primary-color);
             position: relative;
             display: inline-block;
         }
-        
+
         .highlight::after {
             content: '';
             position: absolute;
@@ -192,12 +200,12 @@
             background-color: rgba(37, 99, 235, 0.2);
             z-index: -1;
         }
-        
+
         .profile-img-container {
             position: relative;
             display: inline-block;
         }
-        
+
         .profile-img {
             border-radius: 20px;
             box-shadow: var(--card-shadow);
@@ -206,11 +214,11 @@
             z-index: 2;
             border: 8px solid white;
         }
-        
+
         .profile-img:hover {
             transform: translateY(-10px) rotate(2deg);
         }
-        
+
         .floating-icons {
             position: absolute;
             width: 100%;
@@ -219,7 +227,7 @@
             left: 0;
             z-index: 1;
         }
-        
+
         .floating-icon {
             position: absolute;
             width: 50px;
@@ -234,30 +242,37 @@
             font-size: 1.5rem;
             animation: float 6s ease-in-out infinite;
         }
-        
+
         .floating-icon:nth-child(1) {
             top: -20px;
             right: -20px;
             animation-delay: 0s;
         }
-        
+
         .floating-icon:nth-child(2) {
             bottom: 30px;
             left: -30px;
             animation-delay: 2s;
         }
-        
+
         .floating-icon:nth-child(3) {
             bottom: -15px;
             right: 30px;
             animation-delay: 4s;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
         }
-        
+
         /* Section Styling */
         .section-title {
             position: relative;
@@ -265,7 +280,7 @@
             padding-bottom: 15px;
             display: inline-block;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -276,21 +291,21 @@
             background-color: var(--accent-color);
             border-radius: 2px;
         }
-        
+
         .section-title.center::after {
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         .section-padding {
             padding: 100px 0;
         }
-        
+
         .bg-light-section {
             background-color: var(--light-bg);
             position: relative;
         }
-        
+
         /* Tool Badges */
         .tool-badge {
             display: inline-flex;
@@ -303,30 +318,30 @@
             transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
         }
-        
+
         .tool-badge:hover {
             transform: translateY(-3px);
             box-shadow: var(--hover-shadow);
             border-color: var(--primary-color);
         }
-        
+
         .tool-badge i {
             margin-right: 8px;
             color: var(--primary-color);
         }
-        
+
         .tool-badge.cloud {
             border-left: 4px solid var(--cloud-color);
         }
-        
+
         .tool-badge.devops {
             border-left: 4px solid var(--devops-color);
         }
-        
+
         .tool-badge.network {
             border-left: 4px solid var(--accent-color);
         }
-        
+
         /* Skill Cards */
         .skill-category {
             background: white;
@@ -339,12 +354,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .skill-category:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
         }
-        
+
         .skill-category::before {
             content: '';
             position: absolute;
@@ -354,7 +369,7 @@
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
         }
-        
+
         .skill-icon {
             width: 70px;
             height: 70px;
@@ -366,30 +381,30 @@
             color: white;
             font-size: 1.8rem;
         }
-        
+
         .cloud-icon {
             background: linear-gradient(135deg, var(--cloud-color), #7c3aed);
         }
-        
+
         .devops-icon {
             background: linear-gradient(135deg, var(--devops-color), #059669);
         }
-        
+
         .network-icon {
             background: linear-gradient(135deg, var(--accent-color), #0891b2);
         }
-        
+
         .tools-icon {
             background: linear-gradient(135deg, #f59e0b, #d97706);
         }
-        
+
         /* Experience Timeline */
         .timeline-container {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .timeline-container::after {
             content: '';
             position: absolute;
@@ -401,22 +416,22 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
-        
+
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
         }
-        
+
         .timeline-item:nth-child(odd) {
             left: 0;
         }
-        
+
         .timeline-item:nth-child(even) {
             left: 50%;
         }
-        
+
         .timeline-content {
             padding: 25px;
             background-color: white;
@@ -425,7 +440,7 @@
             position: relative;
             border: 1px solid #e2e8f0;
         }
-        
+
         .timeline-content::after {
             content: '';
             position: absolute;
@@ -438,11 +453,11 @@
             z-index: 1;
             box-shadow: 0 0 0 4px var(--primary-color);
         }
-        
+
         .timeline-item:nth-child(even) .timeline-content::after {
             left: -10px;
         }
-        
+
         .timeline-date {
             display: inline-block;
             padding: 5px 15px;
@@ -453,7 +468,7 @@
             font-weight: 500;
             margin-bottom: 15px;
         }
-        
+
         /* Project Cards */
         .project-card {
             border-radius: 16px;
@@ -465,12 +480,12 @@
             border: 1px solid #e2e8f0;
             position: relative;
         }
-        
+
         .project-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: var(--hover-shadow);
         }
-        
+
         .project-img {
             height: 200px;
             display: flex;
@@ -481,7 +496,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .project-img::after {
             content: '';
             position: absolute;
@@ -491,12 +506,12 @@
             height: 100%;
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(6, 182, 212, 0.8));
         }
-        
+
         .project-img i {
             z-index: 1;
             position: relative;
         }
-        
+
         .project-tag {
             display: inline-block;
             padding: 5px 12px;
@@ -509,13 +524,13 @@
             margin-bottom: 10px;
             transition: all 0.3s ease;
         }
-        
+
         .project-tag:hover {
             background-color: var(--primary-color);
             color: white;
             transform: translateY(-2px);
         }
-        
+
         /* Cloud Services Showcase */
         .service-card {
             background: white;
@@ -527,13 +542,13 @@
             border: 1px solid #e2e8f0;
             height: 100%;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
             border-color: var(--primary-color);
         }
-        
+
         .service-icon {
             width: 70px;
             height: 70px;
@@ -545,31 +560,31 @@
             color: white;
             font-size: 1.8rem;
         }
-        
+
         .aws-icon {
             background: linear-gradient(135deg, #FF9900, #FF6600);
         }
-        
+
         .azure-icon {
             background: linear-gradient(135deg, #0078D4, #005A9E);
         }
-        
+
         .gcp-icon {
             background: linear-gradient(135deg, #4285F4, #0F9D58);
         }
-        
+
         .docker-icon {
             background: linear-gradient(135deg, #2496ED, #1D63ED);
         }
-        
+
         .kubernetes-icon {
             background: linear-gradient(135deg, #326CE5, #2E55A4);
         }
-        
+
         .terraform-icon {
             background: linear-gradient(135deg, #7B42BC, #5A2D91);
         }
-        
+
         /* DevOps Pipeline Visualization */
         .pipeline-container {
             background: white;
@@ -579,7 +594,7 @@
             margin: 30px 0;
             border: 1px solid #e2e8f0;
         }
-        
+
         .pipeline-step {
             display: flex;
             align-items: center;
@@ -589,12 +604,12 @@
             background: var(--light-bg);
             transition: all 0.3s ease;
         }
-        
+
         .pipeline-step:hover {
             background: #e0f2fe;
             transform: translateX(10px);
         }
-        
+
         .step-number {
             width: 40px;
             height: 40px;
@@ -607,7 +622,7 @@
             margin-right: 15px;
             font-weight: 600;
         }
-        
+
         /* Contact Section */
         .contact-card {
             background: white;
@@ -619,13 +634,13 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-        
+
         .contact-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
             border-color: var(--primary-color);
         }
-        
+
         .contact-icon {
             width: 80px;
             height: 80px;
@@ -638,7 +653,7 @@
             color: white;
             font-size: 2rem;
         }
-        
+
         /* Footer */
         .footer {
             background-color: var(--secondary-color);
@@ -646,7 +661,7 @@
             padding: 80px 0 30px;
             position: relative;
         }
-        
+
         .footer::before {
             content: '';
             position: absolute;
@@ -656,7 +671,7 @@
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
         }
-        
+
         .footer-links a {
             color: #94a3b8;
             text-decoration: none;
@@ -664,64 +679,65 @@
             display: block;
             margin-bottom: 10px;
         }
-        
+
         .footer-links a:hover {
             color: white;
         }
-        
+
         /* Responsive Design */
         @media screen and (max-width: 992px) {
             .timeline-container::after {
                 left: 31px;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-            
+
             .timeline-item:nth-child(even) {
                 left: 0;
             }
-            
+
             .timeline-content::after {
                 left: 50px !important;
                 right: auto !important;
             }
-            
+
             .hero-title {
                 font-size: 2.8rem;
             }
         }
-        
+
         @media screen and (max-width: 768px) {
             .hero-title {
                 font-size: 2.3rem;
             }
-            
+
             .section-padding {
                 padding: 70px 0;
             }
-            
+
             .hero-section {
                 padding: 120px 0 60px;
             }
         }
-        
+
         /* Animation Classes */
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        
+
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -767,13 +783,17 @@
                 <div class="col-lg-6 hero-content">
                     <h6 class="text-primary mono-font mb-3 animate__animated animate__fadeInDown">Hello, I'm</h6>
                     <h1 class="hero-title animate__animated animate__fadeInUp">Prabhjot Singh</h1>
-                    <h2 class="h3 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Cloud & <span class="highlight">DevOps Engineer</span></h2>
-                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-2s">Aspiring Cloud and DevOps Engineer with expertise in AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, and network infrastructure. Passionate about building scalable, secure, and efficient cloud solutions.</p>
+                    <h2 class="h3 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Cloud & <span
+                            class="highlight">DevOps Engineer</span></h2>
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-2s">Aspiring Cloud and
+                        DevOps Engineer with expertise in AWS, Docker, Kubernetes, Terraform, CI/CD pipelines, and
+                        network infrastructure. Passionate about building scalable, secure, and efficient cloud
+                        solutions.</p>
                     <div class="mt-5 animate__animated animate__fadeInUp animate__delay-3s">
                         <a href="#contact" class="btn btn-primary btn-lg me-3 shadow-lg">Get In Touch</a>
                         <a href="#projects" class="btn btn-outline-primary btn-lg">View Projects</a>
                     </div>
-                    
+
                     <div class="mt-5 pt-4 animate__animated animate__fadeInUp animate__delay-4s">
                         <h5 class="mb-3">Connect with me:</h5>
                         <div class="d-flex flex-wrap gap-2">
@@ -805,7 +825,8 @@
                                 <i class="fab fa-linux"></i>
                             </div>
                         </div>
-                        <img src="https://ui-avatars.com/api/?name=Prabhjot+Singh&background=2563eb&color=fff&size=400&bold=true&font-size=0.5" alt="Prabhjot Singh" class="profile-img img-fluid">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQHvos2K1TA_jA/profile-displayphoto-shrink_400_400/B56Zfjd2TTHoAw-/0/1751867943709?e=1772064000&v=beta&t=Uz_XQ7vF-QxpDA-orLKev5iEl1XGbC1oMvNx4ptP_qs"
+                            alt="Prabhjot Singh" class="profile-img img-fluid">
                     </div>
                 </div>
             </div>
@@ -818,29 +839,42 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="section-title">About Me</h2>
-                    <p class="lead mb-4">I am a passionate <strong>Cloud and DevOps Engineer</strong> with a strong foundation in network infrastructure, cloud technologies, and automation. Currently pursuing my B.Tech in Computer Science & Engineering at CT University (2022-2026).</p>
-                    
-                    <p class="mb-4">I specialize in designing, implementing, and securing scalable cloud infrastructure using modern DevOps practices. My expertise spans across AWS cloud services, containerization with Docker and Kubernetes, Infrastructure as Code with Terraform, and CI/CD pipeline implementation.</p>
-                    
-                    <p class="mb-4">With hands-on experience in network architecture design using Cisco technologies, I bridge the gap between traditional networking and modern cloud infrastructure. I'm passionate about building resilient, secure, and cost-effective solutions that drive business value.</p>
-                    
+                    <p class="lead mb-4">I am a passionate <strong>Cloud and DevOps Engineer</strong> with a strong
+                        foundation in network infrastructure, cloud technologies, and automation. Currently pursuing my
+                        B.Tech in Computer Science & Engineering at CT University (2022-2026).</p>
+
+                    <p class="mb-4">I specialize in designing, implementing, and securing scalable cloud infrastructure
+                        using modern DevOps practices. My expertise spans across AWS cloud services, containerization
+                        with Docker and Kubernetes, Infrastructure as Code with Terraform, and CI/CD pipeline
+                        implementation.</p>
+
+                    <p class="mb-4">With hands-on experience in network architecture design using Cisco technologies, I
+                        bridge the gap between traditional networking and modern cloud infrastructure. I'm passionate
+                        about building resilient, secure, and cost-effective solutions that drive business value.</p>
+
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Cloud Architecture Design</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> DevOps & Automation</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Security</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Cloud
+                                    Architecture Design</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> DevOps &
+                                    Automation</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Network Security
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> CI/CD Implementation</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Infrastructure as Code</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Container Orchestration</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> CI/CD
+                                    Implementation</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Infrastructure as
+                                    Code</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Container
+                                    Orchestration</li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="mt-4">
                         <a href="#contact" class="btn btn-primary me-3 shadow-sm">Hire Me</a>
                         <a href="#" class="btn btn-outline-primary">Download Resume</a>
@@ -856,7 +890,8 @@
                                     <h5>Bachelor of Technology (B.Tech)</h5>
                                     <p class="text-muted">Computer Science & Engineering</p>
                                     <p><strong>CT University</strong></p>
-                                    <p class="mt-2">Focus on Cloud Computing, Network Security, and Distributed Systems</p>
+                                    <p class="mt-2">Focus on Cloud Computing, Network Security, and Distributed Systems
+                                    </p>
                                 </div>
                             </div>
                             <div class="timeline-item">
@@ -869,7 +904,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-5">
                             <h4 class="mb-4">Certifications</h4>
                             <div class="d-flex flex-wrap gap-2">
@@ -897,8 +932,9 @@
     <section id="skills" class="section-padding bg-light-section">
         <div class="container">
             <h2 class="section-title center text-center">Technical Skills</h2>
-            <p class="text-center mb-5 lead">Comprehensive skill set spanning cloud computing, DevOps, networking, and infrastructure</p>
-            
+            <p class="text-center mb-5 lead">Comprehensive skill set spanning cloud computing, DevOps, networking, and
+                infrastructure</p>
+
             <div class="row g-4">
                 <!-- Cloud Technologies -->
                 <div class="col-lg-3 col-md-6">
@@ -910,14 +946,17 @@
                         <p class="text-muted mb-3">Expertise in cloud platforms and services</p>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> AWS (EC2, S3, VPC, IAM)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Microsoft Azure Fundamentals</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Google Cloud Platform Basics</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Cloud Storage & Databases</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Microsoft Azure Fundamentals
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Google Cloud Platform Basics
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Cloud Storage & Databases
+                            </li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Serverless Computing</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- DevOps & Automation -->
                 <div class="col-lg-3 col-md-6">
                     <div class="skill-category fade-in-up">
@@ -927,15 +966,19 @@
                         <h4>DevOps & Automation</h4>
                         <p class="text-muted mb-3">CI/CD, configuration management, and automation</p>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Docker & Containerization</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Kubernetes & Orchestration</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Jenkins & CI/CD Pipelines</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Docker & Containerization
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Kubernetes & Orchestration
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Jenkins & CI/CD Pipelines
+                            </li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Git & Version Control</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Ansible & Configuration Mgmt</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Ansible & Configuration Mgmt
+                            </li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Networking -->
                 <div class="col-lg-3 col-md-6">
                     <div class="skill-category fade-in-up">
@@ -945,15 +988,17 @@
                         <h4>Networking</h4>
                         <p class="text-muted mb-3">Network design, security, and implementation</p>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Routing (OSPF, BGP, EIGRP)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Routing (OSPF, BGP, EIGRP)
+                            </li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Switching & VLANs</li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Network Security & ACLs</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VPN & Firewall Configuration</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VPN & Firewall Configuration
+                            </li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> DHCP, DNS, NAT/PAT</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Infrastructure & Tools -->
                 <div class="col-lg-3 col-md-6">
                     <div class="skill-category fade-in-up">
@@ -964,9 +1009,12 @@
                         <p class="text-muted mb-3">Infrastructure management and monitoring</p>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Terraform (IaC)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Linux/Unix Administration</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Monitoring (Prometheus, Grafana)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Scripting (Bash, Python)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Linux/Unix Administration
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Monitoring (Prometheus,
+                                Grafana)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Scripting (Bash, Python)
+                            </li>
                             <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Cisco Packet Tracer</li>
                         </ul>
                     </div>
@@ -979,8 +1027,9 @@
     <section id="tools" class="section-padding">
         <div class="container">
             <h2 class="section-title center text-center">Tools & Technologies</h2>
-            <p class="text-center mb-5 lead">Comprehensive toolkit for modern cloud infrastructure and DevOps workflows</p>
-            
+            <p class="text-center mb-5 lead">Comprehensive toolkit for modern cloud infrastructure and DevOps workflows
+            </p>
+
             <!-- Cloud Platforms -->
             <div class="mb-5">
                 <h4 class="mb-4 text-center"><i class="fas fa-cloud me-2"></i> Cloud Platforms</h4>
@@ -1029,7 +1078,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- DevOps Tools -->
             <div class="mb-5">
                 <h4 class="mb-4 text-center"><i class="fas fa-code-branch me-2"></i> DevOps & Containerization</h4>
@@ -1040,7 +1089,8 @@
                                 <i class="fab fa-docker"></i>
                             </div>
                             <h5>Docker</h5>
-                            <p class="text-muted small">Containerization, Docker Compose, Docker Swarm, Image Management</p>
+                            <p class="text-muted small">Containerization, Docker Compose, Docker Swarm, Image Management
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -1067,12 +1117,13 @@
                                 <i class="fas fa-layer-group"></i>
                             </div>
                             <h5>Terraform</h5>
-                            <p class="text-muted small">Infrastructure as Code, Resource Management, State Files, Modules</p>
+                            <p class="text-muted small">Infrastructure as Code, Resource Management, State Files,
+                                Modules</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- DevOps Pipeline Visualization -->
             <div class="pipeline-container">
                 <h4 class="text-center mb-4">DevOps Pipeline Implementation</h4>
@@ -1080,46 +1131,52 @@
                     <div class="step-number">1</div>
                     <div>
                         <h6 class="mb-1">Code & Version Control</h6>
-                        <p class="text-muted small mb-0">Git repositories with branching strategies (GitFlow), code reviews, and collaboration</p>
+                        <p class="text-muted small mb-0">Git repositories with branching strategies (GitFlow), code
+                            reviews, and collaboration</p>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="step-number">2</div>
                     <div>
                         <h6 class="mb-1">Continuous Integration</h6>
-                        <p class="text-muted small mb-0">Automated testing, building, and validation using Jenkins/GitHub Actions</p>
+                        <p class="text-muted small mb-0">Automated testing, building, and validation using
+                            Jenkins/GitHub Actions</p>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="step-number">3</div>
                     <div>
                         <h6 class="mb-1">Infrastructure as Code</h6>
-                        <p class="text-muted small mb-0">Provisioning cloud resources using Terraform for consistent environments</p>
+                        <p class="text-muted small mb-0">Provisioning cloud resources using Terraform for consistent
+                            environments</p>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="step-number">4</div>
                     <div>
                         <h6 class="mb-1">Containerization</h6>
-                        <p class="text-muted small mb-0">Dockerizing applications for consistent deployment across environments</p>
+                        <p class="text-muted small mb-0">Dockerizing applications for consistent deployment across
+                            environments</p>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="step-number">5</div>
                     <div>
                         <h6 class="mb-1">Orchestration & Deployment</h6>
-                        <p class="text-muted small mb-0">Kubernetes for container orchestration, rolling updates, and scaling</p>
+                        <p class="text-muted small mb-0">Kubernetes for container orchestration, rolling updates, and
+                            scaling</p>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="step-number">6</div>
                     <div>
                         <h6 class="mb-1">Monitoring & Logging</h6>
-                        <p class="text-muted small mb-0">Prometheus for metrics, Grafana for visualization, ELK Stack for logging</p>
+                        <p class="text-muted small mb-0">Prometheus for metrics, Grafana for visualization, ELK Stack
+                            for logging</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Additional Tools -->
             <div class="mt-5">
                 <h4 class="mb-4 text-center">Additional Tools & Technologies</h4>
@@ -1164,7 +1221,7 @@
         <div class="container">
             <h2 class="section-title center text-center">Experience</h2>
             <p class="text-center mb-5 lead">Professional journey in cloud computing and network engineering</p>
-            
+
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="card border-0 shadow-lg overflow-hidden">
@@ -1180,31 +1237,36 @@
                                 <div class="card-body p-4">
                                     <h4 class="text-primary">Pisoft Informatics Pvt. Ltd.</h4>
                                     <p class="text-muted">S.A.S Nagar, Mohali, Punjab, India</p>
-                                    
+
                                     <h5 class="mt-4">Responsibilities & Achievements:</h5>
                                     <ul class="list-unstyled mt-3">
                                         <li class="mb-3">
                                             <i class="fas fa-check-circle text-primary me-2"></i>
-                                            <strong>Cloud Infrastructure Configuration:</strong> Gained hands-on experience in configuring and managing cloud infrastructure on AWS
+                                            <strong>Cloud Infrastructure Configuration:</strong> Gained hands-on
+                                            experience in configuring and managing cloud infrastructure on AWS
                                         </li>
                                         <li class="mb-3">
                                             <i class="fas fa-check-circle text-primary me-2"></i>
-                                            <strong>Networking Environments:</strong> Implemented and secured network architectures in cloud environments
+                                            <strong>Networking Environments:</strong> Implemented and secured network
+                                            architectures in cloud environments
                                         </li>
                                         <li class="mb-3">
                                             <i class="fas fa-check-circle text-primary me-2"></i>
-                                            <strong>DevOps Practices:</strong> Applied basic DevOps practices including version control, automation, and CI/CD concepts
+                                            <strong>DevOps Practices:</strong> Applied basic DevOps practices including
+                                            version control, automation, and CI/CD concepts
                                         </li>
                                         <li class="mb-3">
                                             <i class="fas fa-check-circle text-primary me-2"></i>
-                                            <strong>Linux Administration:</strong> Worked extensively in real-time Linux-based environments for server management
+                                            <strong>Linux Administration:</strong> Worked extensively in real-time
+                                            Linux-based environments for server management
                                         </li>
                                         <li>
                                             <i class="fas fa-check-circle text-primary me-2"></i>
-                                            <strong>Virtualization & IP Management:</strong> Managed IP addressing schemes and virtualization technologies
+                                            <strong>Virtualization & IP Management:</strong> Managed IP addressing
+                                            schemes and virtualization technologies
                                         </li>
                                     </ul>
-                                    
+
                                     <div class="mt-4">
                                         <h6>Technologies Used:</h6>
                                         <div class="d-flex flex-wrap gap-2 mt-2">
@@ -1230,7 +1292,7 @@
         <div class="container">
             <h2 class="section-title center text-center">Projects</h2>
             <p class="text-center mb-5 lead">Hands-on projects demonstrating cloud, DevOps, and networking skills</p>
-            
+
             <div class="row g-4">
                 <!-- Project 1 -->
                 <div class="col-lg-6">
@@ -1246,17 +1308,23 @@
                                 </div>
                                 <span class="badge bg-primary">Networking</span>
                             </div>
-                            <p>Designed and simulated a multi-building enterprise network for a campus serving over 5 logical user groups (Staff, Students, CCTV, Guests).</p>
-                            
+                            <p>Designed and simulated a multi-building enterprise network for a campus serving over 5
+                                logical user groups (Staff, Students, CCTV, Guests).</p>
+
                             <h6 class="mt-4">Key Implementations:</h6>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VLANs for network segmentation and security</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> HSRP on core switches for gateway redundancy</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> OSPF for dynamic routing and fast convergence</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> ACLs on Layer 3 switches to enforce security policies</li>
-                                <li><i class="fas fa-check text-success me-2"></i> NAT (PAT) on security router for internet access</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VLANs for network
+                                    segmentation and security</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> HSRP on core switches
+                                    for gateway redundancy</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> OSPF for dynamic routing
+                                    and fast convergence</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> ACLs on Layer 3 switches
+                                    to enforce security policies</li>
+                                <li><i class="fas fa-check text-success me-2"></i> NAT (PAT) on security router for
+                                    internet access</li>
                             </ul>
-                            
+
                             <div class="mt-4">
                                 <span class="project-tag">Cisco Packet Tracer</span>
                                 <span class="project-tag">VLANs</span>
@@ -1266,7 +1334,7 @@
                                 <span class="project-tag">NAT/PAT</span>
                                 <span class="project-tag">DHCP</span>
                             </div>
-                            
+
                             <div class="mt-4">
                                 <a href="#" class="btn btn-primary me-2">View Details</a>
                                 <a href="#" class="btn btn-outline-primary">View on GitHub</a>
@@ -1274,7 +1342,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="col-lg-6">
                     <div class="project-card">
@@ -1289,16 +1357,21 @@
                                 </div>
                                 <span class="badge bg-success">Network Security</span>
                             </div>
-                            <p>Engineered a segmented network for three departments (Sales, Marketing, Engineering) to enhance security and performance while maintaining necessary connectivity.</p>
-                            
+                            <p>Engineered a segmented network for three departments (Sales, Marketing, Engineering) to
+                                enhance security and performance while maintaining necessary connectivity.</p>
+
                             <h6 class="mt-4">Key Implementations:</h6>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Created and assigned VLANs on Cisco 2960 switches</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Configured router-on-a-stick with sub-interfaces for inter-VLAN routing</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Developed and applied Extended ACLs to control inter-departmental communication</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Allowed unrestricted access to shared central servers while blocking unauthorized traffic</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Created and assigned
+                                    VLANs on Cisco 2960 switches</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Configured
+                                    router-on-a-stick with sub-interfaces for inter-VLAN routing</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Developed and applied
+                                    Extended ACLs to control inter-departmental communication</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Allowed unrestricted access to shared
+                                    central servers while blocking unauthorized traffic</li>
                             </ul>
-                            
+
                             <div class="mt-4">
                                 <span class="project-tag">VLAN Segmentation</span>
                                 <span class="project-tag">ACLs</span>
@@ -1307,7 +1380,7 @@
                                 <span class="project-tag">Network Security</span>
                                 <span class="project-tag">Inter-VLAN Routing</span>
                             </div>
-                            
+
                             <div class="mt-4">
                                 <a href="#" class="btn btn-primary me-2">View Details</a>
                                 <a href="#" class="btn btn-outline-primary">View on GitHub</a>
@@ -1315,7 +1388,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 - Cloud Project -->
                 <div class="col-lg-6">
                     <div class="project-card">
@@ -1330,16 +1403,21 @@
                                 </div>
                                 <span class="badge bg-warning text-dark">Cloud</span>
                             </div>
-                            <p>Designed and deployed a three-tier web application on AWS with high availability, auto-scaling, and secure network architecture.</p>
-                            
+                            <p>Designed and deployed a three-tier web application on AWS with high availability,
+                                auto-scaling, and secure network architecture.</p>
+
                             <h6 class="mt-4">Architecture Components:</h6>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VPC with public and private subnets across availability zones</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Application Load Balancer distributing traffic to auto-scaling groups</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> RDS MySQL instance in private subnet for data persistence</li>
-                                <li><i class="fas fa-check text-success me-2"></i> CloudFront CDN and S3 for static content delivery</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VPC with public and
+                                    private subnets across availability zones</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Application Load
+                                    Balancer distributing traffic to auto-scaling groups</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> RDS MySQL instance in
+                                    private subnet for data persistence</li>
+                                <li><i class="fas fa-check text-success me-2"></i> CloudFront CDN and S3 for static
+                                    content delivery</li>
                             </ul>
-                            
+
                             <div class="mt-4">
                                 <span class="project-tag">AWS</span>
                                 <span class="project-tag">VPC</span>
@@ -1349,7 +1427,7 @@
                                 <span class="project-tag">CloudFront</span>
                                 <span class="project-tag">S3</span>
                             </div>
-                            
+
                             <div class="mt-4">
                                 <a href="#" class="btn btn-primary me-2">View Details</a>
                                 <a href="#" class="btn btn-outline-primary">View on GitHub</a>
@@ -1357,7 +1435,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 4 - DevOps Project -->
                 <div class="col-lg-6">
                     <div class="project-card">
@@ -1372,16 +1450,21 @@
                                 </div>
                                 <span class="badge bg-info">DevOps</span>
                             </div>
-                            <p>Implemented a complete CI/CD pipeline for a microservices application using Docker, Kubernetes, Jenkins, and Terraform.</p>
-                            
+                            <p>Implemented a complete CI/CD pipeline for a microservices application using Docker,
+                                Kubernetes, Jenkins, and Terraform.</p>
+
                             <h6 class="mt-4">Pipeline Stages:</h6>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Automated testing and building with Jenkins pipelines</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Docker image creation and push to container registry</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Infrastructure provisioning with Terraform</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Automated deployment to Kubernetes cluster with Helm charts</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Automated testing and
+                                    building with Jenkins pipelines</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Docker image creation
+                                    and push to container registry</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Infrastructure
+                                    provisioning with Terraform</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Automated deployment to Kubernetes
+                                    cluster with Helm charts</li>
                             </ul>
-                            
+
                             <div class="mt-4">
                                 <span class="project-tag">Docker</span>
                                 <span class="project-tag">Kubernetes</span>
@@ -1391,7 +1474,7 @@
                                 <span class="project-tag">Helm</span>
                                 <span class="project-tag">Microservices</span>
                             </div>
-                            
+
                             <div class="mt-4">
                                 <a href="#" class="btn btn-primary me-2">View Details</a>
                                 <a href="#" class="btn btn-outline-primary">View on GitHub</a>
@@ -1407,8 +1490,9 @@
     <section id="contact" class="section-padding bg-light-section">
         <div class="container">
             <h2 class="section-title center text-center">Get In Touch</h2>
-            <p class="text-center mb-5 lead">Interested in collaborating or discussing opportunities? Reach out to me!</p>
-            
+            <p class="text-center mb-5 lead">Interested in collaborating or discussing opportunities? Reach out to me!
+            </p>
+
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="contact-card">
@@ -1421,7 +1505,7 @@
                         <a href="mailto:jot.saini644505@gmail.com" class="btn btn-primary mt-3">Send Email</a>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -1433,7 +1517,7 @@
                         <a href="tel:+916283085101" class="btn btn-primary mt-3">Call Now</a>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -1446,7 +1530,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Contact Form -->
             <div class="row mt-5">
                 <div class="col-lg-8 mx-auto">
@@ -1489,7 +1573,9 @@
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h3 class="mb-3 text-white"><i class="fas fa-cloud me-2"></i>Prabhjot Singh</h3>
-                    <p class="text-light">Cloud & DevOps Engineer specializing in AWS, Docker, Kubernetes, Terraform, and network infrastructure. Passionate about building scalable, secure, and efficient cloud solutions.</p>
+                    <p class="text-light">Cloud & DevOps Engineer specializing in AWS, Docker, Kubernetes, Terraform,
+                        and network infrastructure. Passionate about building scalable, secure, and efficient cloud
+                        solutions.</p>
                     <div class="mt-4">
                         <a href="#" class="text-light me-3 fs-5"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="text-light me-3 fs-5"><i class="fab fa-github"></i></a>
@@ -1540,7 +1626,8 @@
                     <p class="mb-0">&copy; 2023 Prabhjot Singh. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for the Cloud & DevOps Community</p>
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for the Cloud & DevOps
+                        Community</p>
                 </div>
             </div>
         </div>
@@ -1548,11 +1635,11 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JavaScript -->
     <script>
         // Navbar background on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('navbar-scrolled', 'shadow');
@@ -1561,7 +1648,7 @@
                 navbar.classList.remove('navbar-scrolled', 'shadow');
                 navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
             }
-            
+
             // Update active nav link based on scroll position
             updateActiveNavLink();
         });
@@ -1570,17 +1657,17 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     // Update active nav link
                     document.querySelectorAll('.nav-link').forEach(link => {
                         link.classList.remove('active');
@@ -1594,7 +1681,7 @@
         function updateActiveNavLink() {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
@@ -1603,7 +1690,7 @@
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -1613,19 +1700,19 @@
         }
 
         // Form submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // In a real application, you would send this data to a server
             // For now, we'll just show an alert
             alert(`Thank you ${name}! Your message has been sent. I'll get back to you at ${email} soon.`);
-            
+
             // Reset the form
             this.reset();
         });
@@ -1635,7 +1722,7 @@
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1643,7 +1730,7 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe elements for animation
         document.querySelectorAll('.fade-in-up').forEach(element => {
             observer.observe(element);
@@ -1651,11 +1738,11 @@
 
         // Tool badges hover effect
         document.querySelectorAll('.tool-badge').forEach(badge => {
-            badge.addEventListener('mouseenter', function() {
+            badge.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-5px)';
             });
-            
-            badge.addEventListener('mouseleave', function() {
+
+            badge.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0)';
             });
         });
@@ -1668,15 +1755,15 @@
 
         // Cloud platform icons animation
         document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 const icon = this.querySelector('.service-icon i');
                 if (icon) {
                     icon.style.transform = 'scale(1.2) rotate(5deg)';
                     icon.style.transition = 'transform 0.3s ease';
                 }
             });
-            
-            card.addEventListener('mouseleave', function() {
+
+            card.addEventListener('mouseleave', function () {
                 const icon = this.querySelector('.service-icon i');
                 if (icon) {
                     icon.style.transform = 'scale(1) rotate(0deg)';
@@ -1685,15 +1772,16 @@
         });
 
         // Initialize animations on page load
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             // Add visible class to hero elements
             document.querySelectorAll('.animate__animated').forEach(element => {
                 element.classList.add('animate__faster');
             });
-            
+
             // Trigger scroll event to set initial navbar state
             window.dispatchEvent(new Event('scroll'));
         });
     </script>
 </body>
+
 </html>
